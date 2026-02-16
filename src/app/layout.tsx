@@ -18,9 +18,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${inter.variable} h-full bg-black`}
+      suppressHydrationWarning>
       <body
-        className={`antialiased bg-white dark:bg-black font-sans text-zinc-900 dark:text-zinc-50 min-h-screen flex flex-col`}>
+        className={`antialiased bg-black text-white font-sans min-h-screen flex flex-col`}>
         <TrpcProvider>
           <ConfirmProvider>
             <Navbar />
